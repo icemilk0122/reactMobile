@@ -6,6 +6,7 @@ import React, {
 } from 'react-native';
 import { Provider } from 'react-redux';
 import Luncher from './luncher/components/Luncher';
+import News from './news/components/News';
 import configureStore from './common/store/store';
 
 class ReactMobile extends Component {
@@ -13,7 +14,7 @@ class ReactMobile extends Component {
   render() {
     return (
       <Provider store={configureStore()}>
-        <Luncher />
+        <News />
       </Provider>
     );
   }

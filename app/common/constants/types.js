@@ -1,1 +1,2 @@
 export const UPDATE_NAME = 'UPDATE_NAME';
+export const UPDATE_CONTENT = 'UPDATE_CONTENT';

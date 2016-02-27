@@ -9,6 +9,11 @@ function createInitialState() {
       model: {
         name: 'This is the world of react native.'
       }
+    }),
+    news: Immutable.fromJS({
+      model: {
+        content: "news content"
+      }
     })
   };
 }
