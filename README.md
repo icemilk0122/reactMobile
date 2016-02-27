@@ -38,6 +38,19 @@ git clone https://github.com/jhabdas/react-native-webpack-starter-kit.git react-
 npm install # or simply npm i
 ```
 
+## Before running
+
+solve the collision issue
+
+- [React Native] "0.19.0"
+- [react-redux] "4.1.2"
+- [redux] "3.1.7"
+- [redux-thunk] "^1.0.3"
+
+```sh
+npm clean
+```
+
 ## Running
 
 Once dependencies are installed, run the kit with:
