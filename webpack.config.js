@@ -5,26 +5,25 @@
 (function() {
   'use strict'
 
-  var path = require('path')
-  var webpack = require('webpack')
+  var path = require('path');
 
   module.exports = {
     debug: true,
     devtool: 'source-map',
     entry: {
-      'index.ios': ['./src/main.ios.js'],
-      'index.android': ['./src/main.android.js'],
+      'index.ios': ['./app/main.ios.js']
+      //'index.android': ['./src/main.android.js'],
     },
     output: {
       path: path.resolve(__dirname, 'build'),
-      filename: '[name].js',
+      filename: '[name].js'
     },
     module: {
       preLoaders: [
         {
           test: /\.(js|jsx|es6)$/,
-          include: path.resolve(__dirname, 'src'),
-          loader: 'eslint-loader',
+          include: path.resolve(__dirname, 'app'),
+          loader: 'eslint-loader'
         }
       ],
       loaders: [
@@ -49,4 +48,4 @@
       ]
     }
   }
-}())
+}());
