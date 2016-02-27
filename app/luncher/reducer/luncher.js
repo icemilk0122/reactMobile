@@ -7,7 +7,7 @@ export default function luncherReducer(state = {}, action) {
   switch (action.type) {
     case types.UPDATE_NAME:
 
-      return state.updateIn(['model', 'name'], function() {
+      return state.updateIn(['model', 'name'], ()=> {
         return action.name
       });
 

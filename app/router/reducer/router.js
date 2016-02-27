@@ -3,12 +3,12 @@
 import * as types from '../../common/constants/types';
 import Immutable from 'immutable';
 
-export default function newsReducer(state = {}, action) {
+export default function routerReducer(state = {}, action) {
   switch (action.type) {
-    case types.UPDATE_CONTENT:
+    case types.NAVIGATE_TO:
 
-      return state.updateIn(['model', 'content'], ()=> {
-        return action.content
+      return state.updateIn(['model', 'page'], ()=> {
+        return action.page;
       });
 
     default:
