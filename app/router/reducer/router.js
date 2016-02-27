@@ -1,7 +1,6 @@
 'use strict';
 
 import * as types from '../../common/constants/types';
-import Immutable from 'immutable';
 
 export default function routerReducer(state = {}, action) {
   switch (action.type) {

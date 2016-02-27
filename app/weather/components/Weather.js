@@ -10,22 +10,22 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Button from 'react-native-button';
 import styles from '../styles/style.js';
-import * as luncherActions from '../actions/luncher';
+import * as weatherActions from '../actions/weather';
 
 
 function mapStateToProps(state) {
   return {
-    model: state.luncher.get('model')
+    model: state.weather.get('model')
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(luncherActions, dispatch)
+    actions: bindActionCreators(weatherActions, dispatch)
   };
 }
 
-class Luncher extends Component {
+class Weather extends Component {
 
   _onPress() {
     this.props.actions.updateName('I know you will come with me.');
@@ -47,4 +47,4 @@ class Luncher extends Component {
 
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Luncher);
+export default connect(mapStateToProps, mapDispatchToProps)(Weather);

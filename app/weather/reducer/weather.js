@@ -1,14 +1,13 @@
 'use strict';
 
 import * as types from '../../common/constants/types';
-import Immutable from 'immutable';
 
-export default function luncherReducer(state = {}, action) {
+export default function weatherReducer(state = {}, action) {
   switch (action.type) {
     case types.UPDATE_NAME:
 
       return state.updateIn(['model', 'name'], ()=> {
-        return action.name
+        return action.name;
       });
 
     default:

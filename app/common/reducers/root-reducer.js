@@ -1,12 +1,12 @@
 'use strict';
 
-import luncherReducer from '../../luncher/reducer/luncher';
+import weatherReducer from '../../weather/reducer/weather';
 import newsReducer from '../../news/reducer/news';
 import routerReducer from '../../router/reducer/router';
 
 const rootReducer = (state, action) => {
   return Object.assign({}, state, {
-    luncher: luncherReducer(state.luncher, action),
+    weather: weatherReducer(state.weather, action),
     news: newsReducer(state.news, action),
     router: routerReducer(state.router, action)
   });
